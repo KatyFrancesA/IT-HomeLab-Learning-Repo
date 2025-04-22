@@ -1,5 +1,5 @@
 ```text
-IT-Learning-Journey/
+IT-HomeLab-Learning-Repo
 ├── README.md
 ├── Networking/
 │   ├── OSI_Model.md
