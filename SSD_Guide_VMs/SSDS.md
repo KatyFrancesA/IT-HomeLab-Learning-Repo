@@ -1,51 +1,127 @@
 # NVMe SSD Selection Process
 
 ## Goal
-
-To select a 1TB M.2 NVMe SSD suitable for running virtual machines externally via USB, prioritising responsiveness (IOPS) and value for money, while acknowledging the USB 3.2 Gen 1 (5Gbps) bottleneck.
+To select a 1TB M.2 NVMe SSD suitable for running virtual machines externally via USB, prioritising responsiveness (IOPS), TBW and value for money, while acknowledging the USB 3.2 Gen 1 (5Gbps) bottleneck on my PC.
 
 ## Key Requirements
 
 *   Interface: M.2 NVMe (PCIe)
 *   Capacity: 1TB
-*   Performance: Good Random Read/Write IOPS for VM responsiveness.
-*   Compatibility: Standard 2280 form factor (no tall heatsinks preferred for enclosure compatibility).
-*   Budget: Aim for best value under £70.
+*   Performance: Good Random Read/Write IOPS.
+*   TBW: 600+
+*   Compatibility: Standard 2280 form factor
+*   Budget: < £70.
 
 ## Options Considered
 
-2.  **Samsung 980 Pro (1TB, With Heatsink)**
-         Price: £60
-    =   *Specs:* PCIe Gen 4, High IOPS, **DRAM Cache**, **8.6mm height**
-    *   *Pros:* Excellent performance, DRAM cache aids consistency under heavy load, reasonable price (for the heatsink version).
-    *   *Cons:* oesn't fit standard enclosures and non heatsink out of budget, making the DRAM benefit poor value given the USB bottleneck. 
-    *   *Status:* Eliminated due to enclosure compatibility challenges.
+1.  **Samsung 980 Pro (1TB, With Heatsink)** - £60  
+**Model Number:** MZ-V8P1T0CW  
+**Specs:**  
+Interface: PCIe Gen 4.0 x4, NVMe 1.3c  
+DRAM: Yes 1GB  
+Form Factor: 2280  
+Sequential Read/Write: 7,000 / 5,000 MB/s  
+Random Read/Write IOPS:  
+QD1, T1: 22K / 60K  
+QD32, T16: 1M / 1M  
+TBW: 600    
+Power Consumption: 6.2W active  
+Controller: Samsung in-house Controller  
+NAND: Samsung V-NAND 3bit MLC  
+Operating Temp: 0 - 70°C   
+System Compatibility: Desktops and laptops meeting PCI-SIG D8 specs    
+Encryption Support: AES 256-bit Encryption (Class 0), TCG/Opal, IEEE1667  
+Warranty: 5 year (Limited)  
 
-2. **WD Black SN770 (1TB)**
-    *   *Price:* £55
-    *   *Specs:* PCIe Gen 4, High IOPS, DRAM-less, Standard Height.
-    *   *Pros:* Excellent IOPS for a DRAM-less drive. Known for high power efficiency and running relatively cool, making it well-suited for enclosures.
-    *   *Cons:* Slightly more expensive than Kioxia G3.
-    *   *Status:* Strong contender.
+***Pros:*** Excellent performance, DRAM aids consistency under heavy workloads, reasonable price for the heatsink version.  
+***Cons:*** Doesn't fit standard enclosures and non heatsink version is out of budget, making the DRAM benefit poor value given the USB bottleneck.  
+***Status:*** Eliminated due to enclosure compatibility challenges.  
 
-3.  **WD Black SN7100 (1TB)**
-    *   *Price:* £60
-    *   *Specs:* PCIe Gen 4, Very High IOPS/Sequential speeds. SN7100 noted as DRAM-less and potentially needing active cooling.
-    *   *Pros:* Top-tier peak performance specs.
-    *   *Cons:* Sequential speed advantage irrelevant due to USB bottleneck. SN7100 thermal concerns make it unsuitable for passive USB enclosures. Price higher than SN770/Kioxia.
-    *   *Status:* Eliminated due to thermal concerns and poor value over USB.
+2. **WD Black SN770 (1TB)** - £55  
+**Model Number:** WDS100T3X0E-00B3N0  
+**Specs:**  
+Interface: PCIe® Gen4 16GT/s 
+DRAM: No (HMB) 
+Form Factor: 2280  
+Sequential Read/Write: 5,150 / 4,900 MB/s  
+Random Read/Write IOPS: 740K / 800K  
+Estimated QD1/T1 IOPS: 70K / 100K - (based on [KitGuru review](https://www.kitguru.net/components/ssd-drives/simon-crisp/wd-black-sn770-1tb-ssd-review/all/1/?utm_source=chatgpt.com))  
+TBW: 600  
+Power Consumption: 5.3W active  
+Controller: SanDisk proprietary  
+NAND: SanDisk TLC (BiCS5)
+Operating Temp: 0 to 85°C    
+System Compatibility: Backward-Compatible with PCIe Gen3 x4, PCIe Gen3 x2, PCIe Gen3 x1, PCIe Gen2 x4, PCIe Gen2 x2 and PCIe Gen2 x1, Windows 8.1, 10, 11  
+Encryption Support: No  
+Warranty: 5 year (Limited)  
 
-5.  **Kioxia Exceria Plus G3 (1TB)**
-    *   *Price:* £46
-    *   *Specs:* PCIe Gen 4, High IOPS (similar to SN770), DRAM-less, Standard Height.
-    *   *Pros:* **Best price.** Performance metrics very close to SN770. Fits standard enclosures.
-    *   *Cons:* Brand slightly less mainstream than WD/Samsung (though Kioxia is Toshiba Memory's successor - reputable).
-    *   *Status:* **Selected.**
+***Pros:*** Excellent IOPS for a DRAM-less drive. Known for high power efficiency and running relatively cool, making it well-suited for enclosures.  
+***Cons:***  Slightly more expensive than Kioxia G3, but offers better QD1 performance.  
+***Status:*** Selected.  
 
-## Reasoning for Final Choice (Kioxia Exceria Plus G3)
+3.  **WD Black SN7100 (1TB)** - £60
+**Model Number:** WDS100T4X0E-00CJA0  
+**Specs:**  
+Interface: PCIe Gen 4 x4  
+DRAM: No (HMB)  
+Form Factor: 2280  
+Sequential Read/Write: 7,250 / 6,900 MB/s  
+Random Read/Write IOPS: 1M / 1.4M  
+Estimated QD1/T1 IOPS: 70K / 100K (inferred)  
+TBW: 600  
+Power Consumption: 4.5 W active  
+Controller: Western Digital Polaris 3 (A101-000172-A1)  
+NAND: Sandisk 218-Layer TLC (BiCS8)  
+Operating Temp: 0 - 85°C  
+System Compatibility: Backwards compatible with PCIe Gen4 x2, PCIe Gen4 x1, PCIe Gen3 x4, PCIe Gen3 x2, PCIe Gen3 x1, PCIe Gen2 x4, PCIe Gen2 x2 and PCIe Gen2 x1, Windows 10+  
+Encryption Support: AES 256-bit Encryption  
+Warranty: 5 year (Limited)  
 
-The USB 3.2 Gen 1 (5Gbps) bottleneck negates the sequential speed advantages of higher-end PCIe Gen 4 drives. Therefore, the focus shifted to good Random IOPS (important for VM responsiveness) and value for money.
+***Pros:*** Top-tier peak performance specs.   
+***Cons:*** Sequential speed advantage irrelevant due to USB bottleneck. Thermal concerns with the SN7100 make it unsuitable for passive USB enclosures.  
+***Status:*** Eliminated due to thermal concerns and poor value over USB.
 
-Both the WD Black SN770 and Kioxia Exceria Plus G3 offered very similar high IOPS performance for DRAM-less drives. Given the bottleneck, the real-world difference in VM responsiveness between these two was expected to be negligible.
+4.  **Kioxia Exceria Plus G3 (1TB)**  - £46
+**Model Number:** LSD10Z001TG8  
+**Specs:**    
+Interface: PCI Express Base Specification Revision 4.0 (PCIe)  
+DRAM: No (HMB)    
+Form Factor: 2280  
+Sequential Read/Write: 5,000 / 3,900 MB/s  
+Random Read/Write IOPS: 770K / 950K
+Estimated QD1/T1 IOPS: 17K / 57K - (based on [SSD Tester ](https://ssd-tester.com/kioxia_exceria_plus_g3_1tb.html))  
+TBW: 600  
+Power Consumption: 5.3W active  
+Controller: Phison PS5021-E21T  
+NAND: BiCS FLASH TLC  
+Operating Temp: 0 - 85°C  
+System Compatibility: Compatible with PCI Express Base Specification Revision 4.0 and NVM Express Revision 1.4 command set  
+Encryption Support: AES 256-bit Encryption  
+Warranty: 5 year (Limited)  
 
-The Kioxia Exceria Plus G3 provided essentially the same relevant performance profile as the SN770 but at a lower price (£46 vs £55). Therefore, the **Kioxia Exceria Plus G3 was chosen as the best value option** for my VM lab setup.
+***Pros:*** Best price. Performance metrics very close to SN770. Fits standard enclosures.  
+***Cons:*** Brand slightly less mainstream than WD/Samsung (though Kioxia is Toshiba Memory's successor - reputable).  
+***Status:*** Eliminated due to lower QD1 random read performance compared to the SN770 for a small price difference.
+
+## Reasoning for Final Choice (WD Black SN770)
+
+The primary goal was responsive external storage for virtual machines within a budget and considering a 5Gbps USB bottleneck.
+
+The Samsung 980 Pro was initially appealing due to its DRAM cache. However, the heatsink version presented enclosure compatibility issues and the non heatsink version was over double the price making it far above my budget and the performance gains poor value over the limited USB connection.
+
+The SN7100 had impressive peak specs but the benchmarks showed it ran too hot for my needs and would've needed active cooling to prevent thermal throttling, which made it a poor fit for USB enclosures, especially considering most of its performance edge would be strangled by the USB connection anyway.
+
+The final decision came down to the WD Black SN770 and the Kioxia Exceria Plus G3. While the Kioxia offered the lowest price, the SN770 demonstrated significantly higher low-queue-depth (QD1) random read performance (70K IOPS vs 17K IOPS) based on third-party benchmarks. This specific metric heavily influences perceived system responsiveness, OS boot times and application loading within VMs. Given the small price difference of £9 the potential improvement in VM user experience offered by the SN770's superior QD1 read speeds justified the slightly higher cost. I must address the fact the SN770 doesn't have built in encryption but I always planned on implementing software based encryption on whatever SSD I chose due to potential vulnerabilities associated with flawed firmware implementations of hardware encryption (like the TCG Opal bypass issues found in the past).
+
+Therefore the **WD Black SN770 was selected** as it provided the best balance of price crucial low queue depth random read performance thermal efficiency and standard enclosure compatibility for this specific use case. Setting aside budget and interface limitations the ideal choice might have been the Samsung 980 Pro without the heatsink but the SN770 represents the optimal practical solution under the existing constraints.
+
+## Why Performance Still Matters Over USB
+
+While USB 3.2 Gen 1 severely limits sequential read/write speeds, it does not bottleneck IOPS as drastically. A high-IOPS NVMe drive in a USB enclosure will still feel much snappier for running VMs than a slower SATA SSD or a mechanical hard drive connected via the same USB port.
+
+Although my PC could potentially handle running a couple of VMs directly using internal storage I decided to go for the SSD in USB enclosure for the following reasons:
+- **Separation:** Keeps your VM environment separate from your main OS drive.
+- **Performance:** Leverages the high random I/O performance even with the USB bottleneck limiting sequential speeds, the high random I/O performance of an NVMe SSD will provide a significantly better experience for running VMs (faster OS boot, quicker application loading within the VM) compared to running them from an internal or external mechanical hard drive, or even a slower external SATA SSD.
+- **Offloading:** Reduces the I/O load on internal drives as running VMs is I/O intensive, making the main OS feel more responsive while VMs are running.
+
+
