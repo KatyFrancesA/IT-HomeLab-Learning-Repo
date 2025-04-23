@@ -2,19 +2,29 @@
 
 ## Project Goal
 
-This document outlines the research, decision-making process and setup for selecting an external SSD and USB enclosure to host virtual machines for my planned projects. The primary goal was to find a cost effective solution providing good performance for running VMs, overcoming internal storage limitations.
+This document the research, decision-making process and setup for selecting an external SSD and USB enclosure to host virtual machines. The goal was to find a cost effective solution that delivers reliable performance for running VM based labs — both to overcome internal storage limitations and to showcase my technical skills for IT related apprenticeships or entry level roles.
 
 ## The Challenge
 
-My primary PC has limited internal storage space available. Furthermore, the available external connection is a **USB 3.2 Gen 1 port**, which has a maximum theoretical throughput of **5Gbps** (approximately 500-600 MB/s real-world). This USB bottleneck significantly impacts the maximum sequential read/write speeds achievable from high-performance NVMe drives when used externally.
+My primary PC has limited internal storage and the USB ports are **3.2 gen 1**, which has a maximum theoretical throughput of **5Gbps** (approximately 500-600 MB/s real-world). This bottleneck limits the performance of external NVMe SSDs, making it essential to balance performance, thermals, compatibility and cost when selecting components.
 
 ## Final Selected Components
 
 *   **SSD:** Kioxia Exceria Plus G3 1TB NVMe M.2 SSD
 *   **Enclosure:** SSK Aluminum M.2 NVMe/SATA SSD Enclosure (Model SHE-C325, RTL9210B Chipset)
 
+This pairing offers solid performance, good thermal handling and USB/UASP compatibility at a reasonable price, ideal for lab workloads involving virtualisation and frequent disk access.
+
 ## Guide Contents
 
-*   **[SSD Selection Process](./SSDS.md):** Details on the NVMe drives considered and the reasoning for the final choice.
-*   **[USB Enclosure Selection Process](./usb-enclosure-guide.md):** Details on the USB enclosures evaluated and the final choice.
-*   **[Benchmark Results](./benchmark-results.md):** Performance benchmarks of the internal drive and the external SSD setup.
+*   **[SSD Selection Process](./SSDS.md):** Evaluation of various Gen4 NVMe SSDs, their performance specs, DRAM presence, TBW ratings and thermal profiles.
+*   **[USB Enclosure Selection Process](./usb-enclosure-guide.md):** Analysis of enclosure chipsets (RTL9210B, JMS583, etc.), heat dissipation and UASP support.
+*   **[Benchmark Results](./benchmark-results.md):** Performance testing with tools like AS SSD and Windows PowerShell disk speed tests.
+
+## Why This Project Matters
+Having fast, portable external storage is crucial for VM labs, especially in cybersecurity. Disk I/O bottlenecks can severely impact system performance during malware analysis, packet capture, or multitiered lab simulations. This project reflects a practical application of hardware knowledge, benchmarking, system limitations and optimisation under constraints.
+
+## Future Improvements
+- Exploring cooling options (passive and active) for better thermal management.
+- Testing with USB 3.2 Gen 2 interfaces and Thunderbolt enclosures.
+- Comparing performance in live VM usage scenarios (e.g., Kali Linux, Windows Server, Metasploitable).
