@@ -2,15 +2,15 @@
 
 ## Project Goal
 
-This document the research, decision-making process and setup for selecting an external SSD and USB enclosure to host virtual machines. The goal was to find a cost effective solution that delivers reliable performance for running VM based labs — both to overcome internal storage limitations and to showcase my technical skills for IT related apprenticeships or entry level roles.
+This document outlines the research, decision making process and setup for selecting an external SSD and USB enclosure to host virtual machines. The goal was to find a cost effective solution that delivers reliable performance for running VM based labs — both to overcome internal storage limitations and to showcase my technical skills for IT related apprenticeships or entry level roles.
 
 ## The Challenge
 
-My primary PC has limited internal storage and the USB ports are **3.2 gen 1**, which has a maximum theoretical throughput of **5Gbps** (approximately 500-600 MB/s real-world). This bottleneck limits the performance of external NVMe SSDs, making it essential to balance performance, thermals, compatibility and cost when selecting components.
+My primary PC has limited internal storage and the USB ports are **3.2 Gen 1**, which has a maximum theoretical throughput of **5Gbps** (approximately 500-600 MB/s real-world). This bottleneck limits the performance of external NVMe SSDs, making it essential to balance performance, thermals, compatibility and cost when selecting components.
 
 ## Final Selected Components
 
-*   **SSD:** Kioxia Exceria Plus G3 1TB NVMe M.2 SSD
+*   **SSD:** WD_BLACK SN770 NVMe SSD - 1TB
 *   **Enclosure:** SSK Aluminum M.2 NVMe/SATA SSD Enclosure (Model SHE-C325, RTL9210B Chipset)
 
 This pairing offers solid performance, good thermal handling and USB/UASP compatibility at a reasonable price, ideal for lab workloads involving virtualisation and frequent disk access.
@@ -18,7 +18,7 @@ This pairing offers solid performance, good thermal handling and USB/UASP compat
 ## Guide Contents
 
 *   **[SSD Selection Process](./SSDS.md):** Evaluation of various Gen4 NVMe SSDs, their performance specs, DRAM presence, TBW ratings and thermal profiles.
-*   **[USB Enclosure Selection Process](./usb-enclosure-guide.md):** Analysis of enclosure chipsets (RTL9210B, JMS583, etc.), heat dissipation and UASP support.
+*   **[USB Enclosure Selection Process](./usb-enclosure-guide.md):** Analysis of enclosure chipsets, heat dissipation and UASP support.
 *   **[Benchmark Results](./benchmark-results.md):** Performance testing with tools like AS SSD and Windows PowerShell disk speed tests.
 
 ## Why This Project Matters
