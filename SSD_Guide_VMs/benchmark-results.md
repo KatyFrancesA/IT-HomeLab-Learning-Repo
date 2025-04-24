@@ -2,15 +2,17 @@
 
 This section documents the performance benchmarks for the storage drives used in this project. Benchmarks were run using PowerShell and AS SSD Benchmark 2.0.7316.34247.
 
-## Internal Drive Benchmark X:
+## Internal Drive Benchmark:
 
-*   **Drive Model:** Internal NVMe SSD
+*   **Drive Model:** Internal NVMe SSD *(Specific model redacted)*
 *   **Connection:** Internal PCIe NVMe Slot
-*   **Test Date:** 23/04/2024
+*   **Test Date:** 23/04/2025
 *   **Tool:** AS SSD Benchmark (1GB Test Size)
 
-**winsat Benchmark Results:**
+<br />
 
+**winsat Benchmark Results:**
+``` text
 > Running: Feature Enumeration ''  
 > Run Time 00:00:00.00  
 > Running: Storage Assessment '-drive x -ran -read'  
@@ -33,13 +35,16 @@ This section documents the performance benchmarks for the storage drives used in
 > Latency: 95th Percentile                     0.240 ms          8.8  
 > Latency: Maximum                             22.437 ms          7.9  
 > Average Read Time with Random Writes         0.116 ms          8.9  
-> Total Run Time 00:00:04.39  
+> Total Run Time 00:00:04.39 
+```
+<br />
 
 **AS SSD Benchmark Results (1GB Test):**
+```text
 AS SSD Benchmark 2.0.7316.34247
 ------------------------------
 Name: Internal NVMe SSD
-Firmware: C01C
+Firmware: [Redacted]
 Controller: iaStorVD
 Offset: 283648 K - OK
 Size: 476.94 GB
@@ -71,13 +76,14 @@ Read: 753
 Write: 489
 Total: 1580
 ------------------------------
+```
 
-
-**AS SSD IOPS Results (1GB Test):**
+**IOPS Results:**
+```text
 AS SSD Benchmark 2.0.7316.34247
 ------------------------------
 Name: Internal NVMe SSD
-Firmware: C01C
+Firmware: [Redacted]
 Controller: iaStorVD
 Offset: 283648 K - OK
 Size: 476.94 GB
@@ -109,10 +115,10 @@ Read: 753
 Write: 489
 Total: 1580
 ------------------------------
+```
 
 **Interpretation:**
-The internal NVMe SSD demonstrates strong performance typical of a PCIe Gen 3 or early Gen 4 drive. Winsat and AS SSD show high sequential read speeds (>2400 MB/s) and good sequential write speeds initially (>1000 MB/s). The crucial 4K random read/write IOPS are solid (AS SSD showing ~15K Read / ~31K Write at QD1), indicating good responsiveness for OS and application loading. Access times are excellent (<0.1ms). Performance likely decreases on sustained writes larger than the drive's cache, as suggested by potential drops in larger AS SSD tests (if performed). Overall, it provides a fast baseline for comparison.
-
+The internal NVMe SSD demonstrates strong performance, winsat and AS SSD show high sequential read speeds (>2400 MB/s) and good sequential write speeds initially (>1000 MB/s). The crucial 4K random read/write IOPS are solid (AS SSD showing 15K Read / 31K Write at QD1), indicating good responsiveness for OS and application loading. Access times are excellent (<0.1ms). Performance likely decreases on sustained writes larger than the drive's cache, overall, it provides a fast baseline for comparison.
 
 ## External SSD Benchmark (WD_BLACK SN770 + SSK Enclosure)
 
@@ -134,5 +140,3 @@ The internal NVMe SSD demonstrates strong performance typical of a PCIe Gen 3 or
 ![IOPS Results](images/AS_SSD_MBs.png)  
 
 ![IOPS Results](images/AS_SSD_IOPS.png)
-
-Example:
