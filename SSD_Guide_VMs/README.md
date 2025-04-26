@@ -11,7 +11,7 @@ My primary PC has limited internal storage and the USB ports are **3.2 Gen 1**, 
 ## Final Selected Components
 
 *   **SSD:** WD_BLACK SN770 NVMe SSD - 1TB
-*   **Enclosure:** SSK Aluminum M.2 NVMe/SATA SSD Enclosure (Model SHE-C325, RTL9210B Chipset)
+*   **Enclosure:** SSK Aluminum M.2 NVMe/SATA SSD Enclosure (Model SHE-C325PRO, RTL9210B Chipset)
 
 This pairing offers solid performance, good thermal handling and USB/UASP compatibility at a reasonable price, ideal for lab workloads involving virtualisation and frequent disk access.
 
