@@ -44,7 +44,7 @@ QD32, T16: 1M / 1M
 
 <br /> 
 
-2. **WD Black SN770 (1TB)** - £55  
+2. **WD Black SN770 (1TB)** - £58  
 **Model Number:** WDS100T3X0E-00B3N0  
 **Interface:** PCIe® Gen4 16GT/s  
 **DRAM:** No (HMB)  
