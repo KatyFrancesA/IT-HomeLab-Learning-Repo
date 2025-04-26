@@ -26,13 +26,13 @@ To select a reliable and affordable USB enclosure for the chosen M.2 NVMe SSD (W
     *   *Features:* Aluminum case, 10Gbps, Includes "cooling vest". Cable inclusion uncertain from initial notes. Supports NVMe & SATA.
     *   *Verdict:* Potentially good value, but uncertainty over included cables made it less appealing and there were cheaper options just as good.
 
-4.  **SSK Aluminum M.2 NVMe/SATA Enclosure (SHE-C325)** - £16
+4.  **SSK Aluminum M.2 NVMe/SATA Enclosure (SHE-C325PRO)** - £16
     *   *Features:* **Lowest price.** Aluminum case, 10Gbps, Explicitly mentions **Realtek RTL9210B** chipset, Supports NVMe & SATA, **Includes both USB-C to C and USB-C to A cables**, Includes thermal pads & screwdriver, Supports UASP & Trim.
     *   *Verdict:* **Selected.**
 
-## Reasoning for Final Choice (SSK SHE-C325)
+## Reasoning for Final Choice (SSK SHE-C325PRO)
 
-The SSK enclosure (Model SHE-C325) offered the best combination of features, confirmed specifications, included accessories and price.
+The SSK enclosure (Model SHE-C325PRO) offered the best combination of features, confirmed specifications, included accessories and price.
 
 *   It mentions the reliable Realtek RTL9210B chipset
 *   It meets the 10Gbps speed requirement
