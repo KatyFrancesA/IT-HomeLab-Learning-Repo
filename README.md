@@ -39,6 +39,7 @@ IT-HomeLab-Learning-Repo
 │   │   ├── AS_SSD_MBs.png
 │   │   ├── desktop.ini
 │   │   └── winsat.png
+|   ├── initial-drive-setup.md
 │   └── usb-enclosure-guide.md
 ├── Scripting_Automation/
 │   ├── Python/
