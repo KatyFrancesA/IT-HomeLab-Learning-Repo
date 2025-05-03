@@ -30,6 +30,17 @@ IT-HomeLab-Learning-Repo
 │   ├── Common_Threats_Malware.md
 │   ├── Security_Controls.md
 │   └── Basic_Encryption_Concepts.md
+├── SSD_Guide_VMs
+│   ├── README.md
+│   ├── SSDS.md
+│   ├── benchmark-results.md
+│   ├── images
+│   │   ├── AS_SSD_IOPS.png
+│   │   ├── AS_SSD_MBs.png
+│   │   ├── desktop.ini
+│   │   └── winsat.png
+|   ├── initial-drive-setup.md
+│   └── usb-enclosure-guide.md
 ├── Scripting_Automation/
 │   ├── Python/
 │   │   ├── system_info.py
